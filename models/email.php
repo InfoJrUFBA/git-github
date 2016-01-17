@@ -19,9 +19,9 @@
             $result = $mgClient->sendMessage($domain, array(
                 'from'    => 'InfoJr UFBA <contato@infojr.com.br>',
                 'to'      => 'Você <'.$this->email.'>',
-                'subject' => 'PlugInfo 2015.2 - Inscrito',
+                'subject' => 'Capacitação em Git & GitHub - Inscrito',
                 'text'    => $this->name,
-                'html'    => '<html style="width:500px"><style>html{width:500px; text-align:center;} img{width: 100%;} a{padding:5px 15px;}</style><img style="width:100%" src="http://www.infojr.com.br/pluginfo/new/assets/img/confirm.jpg"></img>
+                'html'    => '<html style="width:500px"><style>html{width:500px; text-align:center;} img{width: 100%;} a{padding:5px 15px;}</style><img style="width:100%" src="http://www.infojr.com.br/git-github/assets/img/git-confirm.jpg"></img>
                 <a style="padding:5px 15px" href="www.infojr.com.br">www.infojr.com.br</a>
                 <a style="padding:5px 15px" href="www.facebook.com/infojrnews">/infojrnews</a>
                 </html>'
