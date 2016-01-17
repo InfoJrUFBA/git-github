@@ -47,8 +47,12 @@ footer {
 
 button {
     cursor: pointer;
-    transition: all 0.2s;
     border-radius: 3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 h2, h3 {
@@ -183,17 +187,21 @@ h1.github {
     margin-top: 60px;
 }
 
-.aside-btn:hover {
-    background-color: #fff;
-    color: #153446;
+.aside-btn:hover i{
+    color: #F24F29;
+    margin-right: 2px;
 }
-
 .aside-btn h2 {
     margin: 0;
 }
 
 .aside-btn i {
     font-size: 36px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 .triangle {
@@ -255,10 +263,6 @@ h1.github {
         bottom: -150px;
         z-index: 1;
     }
-}
-
-#sign-up {
-    margin-right: 10px;
 }
 
 .professorctocat {
@@ -333,7 +337,7 @@ h1.github {
     border-left: 4px dashed rgb(21, 52, 70);
     transform: rotate(45deg);
     position: absolute;
-    right: 165px;
+    right: 220px;
     bottom: -475px;
     z-index: 1;
     display: block;
