@@ -90,8 +90,33 @@
                 <button class="send-btn" name="action" value="create" type="submit"><i class="octicon octicon-git-merge"></i> Enviar</button>
             </form>
         </section>
-        <footer>
-            <h4>© InfoJr UFBA - 2016</h4>
+        <footer class="a">
+            <div class="about-us">
+                <a href="www.infojr.com.br" target="_blank"><img src="assets/img/infojr-lb-flat.svg" alt=""></a>
+                <p>Empresa Júnior de Informática da Universidade Federal da Bahia, fundada em 26 de Janeiro de 1998, formada por alunos dos cursos de computação.</p>
+            </div>
+            <div class="contact-us">
+                <div class="contact">
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg><p>contato@infojr.com.br</p>
+                </div>
+                <div class="contact">
+                    <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg><p>+55 71 3223-6268</p>
+                </div>
+                <a href="https://facebook.com/infojrnews" class="contact" target="_blank">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                        <path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" />
+                    </svg><p> /infojrnews</p>
+                </a>
+            </div>
+        </footer>
+        <footer class="b">
+            <a href="www.infojr.com.br" target="_blank"><h4>© InfoJr UFBA - 2016</h4></a>
         </footer>
         <script src="vendors/jquery/jquery-2.1.4.min.js"></script>
 		<script src="assets/js/scripts.js"></script>

@@ -31,9 +31,11 @@ section {
     min-height: 100%;
     padding: 30px 7%;
 }
-
+footer {
+    padding: 15px 7%;
+}
 @media(max-width:768px) {
-    section {
+    section, footer {
         padding: 15px 5%;
     }
 }
@@ -546,10 +548,76 @@ select.field {
 
 /*-----------------------------------------------------------------*/
 /*footer*/
-footer {
+
+footer.b {
     text-align: center;
     padding-bottom: 30px;
 }
 
+footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer.a {
+    display: none;
+}
+
+@media(min-width:768px) {
+    footer.b {
+        display: none;
+    }
+    
+    footer.a {
+        display: block;
+        background-color: #153446;
+        color: #FFF;
+    }
+    
+    footer.a:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    
+    footer.a a {
+        color: #FFF;
+    }
+    
+    .about-us {
+        width: 50%;
+        float: left;
+    }
+    
+    .about-us img {
+        width: 150px;
+        display: inline-table;
+        vertical-align: middle;
+    }
+    
+    .about-us p {
+        display: inline-table;
+        width: calc(100% - 200px);
+        margin: 0 15px;
+        font-size: 16px;
+        vertical-align: middle;
+
+    }
+    
+    .contact-us {
+        float: right;
+        width: 30%;
+    }
+    
+    .contact-us p {
+        font-size: 16px;
+    }
+    
+    .contact-us svg {
+        fill: #fff;
+        float: left;
+        margin-right: 15px;
+    }
+}
 /* responsividade */
 
