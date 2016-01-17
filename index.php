@@ -96,7 +96,7 @@
         </section>
         <footer class="a">
             <div class="about-us">
-                <a href="www.infojr.com.br" target="_blank"><img src="assets/img/infojr-lb-flat.svg" alt=""></a>
+                <a href="http://www.infojr.com.br" target="_blank"><img src="assets/img/infojr-lb-flat.svg" alt=""></a>
                 <p>Empresa Júnior de Informática da Universidade Federal da Bahia, fundada em 26 de Janeiro de 1998, formada por alunos dos cursos de computação.</p>
             </div>
             <div class="contact-us">
