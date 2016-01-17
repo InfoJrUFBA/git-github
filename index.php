@@ -13,7 +13,7 @@
 			<div class="text">
 				<h2>Versionamento com</h2>
 				<h1 class="github">Git & GitHub</h1>
-                <h2 class="right">Dia 19 de Fevereiro às 09hs</h2>
+                <h2 class="right">Dia 19 de Fevereiro às 14hs</h2>
                 <a href="#subscribe"><button id="sign-up" class="aside-btn"><h2><i class="octicon octicon-git-pull-request"></i> Inscreva-se</h2></button></a>
 	    	</div>
 	    	<div class="professorctocat">
