@@ -36,7 +36,9 @@
             <main>
                 <div class="box">
                     <div class="circle">
-                        <i class="octicon octicon-octoface"></i>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="#153446" d="M16,12A2,2 0 0,1 18,10A2,2 0 0,1 20,12A2,2 0 0,1 18,14A2,2 0 0,1 16,12M10,12A2,2 0 0,1 12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12M4,12A2,2 0 0,1 6,10A2,2 0 0,1 8,12A2,2 0 0,1 6,14A2,2 0 0,1 4,12Z" />
+                        </svg>
                     </div>
                     <p><b>Prefere salvar código no pen drive e entregar pro amigo, marcar pra desenvolver na casa do brother, ou enviar tudo por e-mail? Pare com isso, jovem...</b></p>
                 </div>
@@ -48,7 +50,9 @@
                 </div>
                 <div class="box">
                     <div class="circle">
-                        <i class="octicon octicon-octoface"></i>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="#153446" d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5C22,3.89 21.1,3 20,3Z" />
+                        </svg>
                     </div>
                     <p><b>Você precisa conhecer e utilizar o versionamento com Git & GitHub, e a InfoJr UFBA vai te proporcionar isso.</b></p>
                 </div>

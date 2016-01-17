@@ -386,6 +386,11 @@ h1.github {
     font-size: 50px;
 }
 
+.circle svg {
+    width: 45px;
+    height: 45px;
+}
+
 @media(max-width:520px) {
     .circle {
         width: 50px;
