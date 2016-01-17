@@ -1,7 +1,8 @@
 
 <?php $uri = $_SERVER['REQUEST_URI']; ?>
 <?php $uri_exploded = explode('/', $uri); ?>
-<?php $page = $uri_exploded[count($uri_exploded)-2] . '/' . array_pop(str_replace('.php', '', $uri_exploded)); ?>
+<?php $uri_replaced = str_replace('.php', '', $uri_exploded); ?>
+<?php $page = $uri_exploded[count($uri_exploded)-2] . '/' . array_pop($uri_replaced); ?>
 <header>
     <a href="../"><img src="../assets/img/professorctocat-git.svg" alt="PlugInfo"></a>
     <input type="checkbox" id="menu" class="toggle">
