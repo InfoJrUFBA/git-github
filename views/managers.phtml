@@ -1,0 +1,55 @@
+<?php
+    session_start();
+    require_once('../helpers/session.php');
+    on();
+    require_once("../models/managers.php");
+
+    $managers = Managers::selectAll();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <?php include('includes/head.inc'); ?>
+    <title>Administradores</title>
+</head>
+<body>
+    <?php include('includes/header.inc'); ?>
+    <section class="box last">
+        <?php echo msg(); ?>
+        <div class="top-bar">
+            <h1><i class="fa fa-newspaper-o"></i> Administradores</h1>
+            <a href="add-managers" class="btn btn-add"><i class="fa fa-plus"></i>Adicionar</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th class="hxs">Email</th>
+                    <th class="hxs">Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($managers as $manager): ?>
+                    <tr>
+                        <td><?php echo $manager->name; ?></td>
+                        <td class="hxs"><?php echo $manager->email; ?></td>
+                        <td class="hxs">Membro
+                        </td>
+                        <td>
+                            <a href="edit-manager?id=<?php echo $manager->id; ?>" class="btn-action edit" title="Editar Usuário"><i class="fa fa-edit fa-lg"></i></a>
+                            <a href="../controllers/managers?delete=<?php echo $manager->id; ?>" onclick="confirm('Deseja remover esse registro?')" class="btn-action del" title="Excluir Usuário"><i class="fa fa-trash-o fa-lg"></i></a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
+    <?php include('includes/footer.inc'); ?>
+    <script>
+        setTimeout(function(){
+            $('.msg').fadeOut();
+        }, 2000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<?php session_start(); ?>
+<?php require_once('../helpers/session.php'); ?>
+<?php on(); ?>
+<?php require_once("../models/users.php"); ?>
+<?php $subscribers = Users::selectSubscribers(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <?php include('includes/head.inc'); ?>
+    <title>Inscritos</title>
+</head>
+<body>
+    <?php include('includes/header.inc'); ?>
+    <section class="box last">
+        <?php echo msg(); ?>
+        <div class="top-bar">
+            <h1><i class="fa fa-newspaper-o"></i> Inscritos</h1>
+            <a href="add-users" class="btn btn-add"><i class="fa fa-plus"></i>Adicionar</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th class="hxs">Email</th>
+                    <th>Matrícula</th>
+                    <th class="hxs">Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <p id="count"></p>
+                <?php foreach ($subscribers as $subscriber): ?>
+                    <tr>
+                        <td><?php echo $subscriber->name; ?></td>
+                        <td class="hxs"><?php echo $subscriber->email; ?></td>
+                        <td><?php echo $subscriber->registry; ?></td>
+                        <td class="hxs">
+                            <select name="status" id="status" onchange="modify(this.value, <?php echo $subscriber->id; ?>)">
+                                <option value="0" <?php if ($subscriber->status == 0) echo "selected"; ?>>Inscrito</option>
+                                <option value="1" <?php if ($subscriber->status == 1) echo "selected"; ?>>Candidato</option>
+                            </select>
+                        </td>
+                        <td>
+                            <a href="edit-user?id=<?php echo $subscriber->id; ?>" class="btn-action edit" title="Editar Usuário"><i class="fa fa-edit fa-lg"></i></a>
+                            <a href="../controllers/user?delete=<?php echo $subscriber->id; ?>" onclick="confirm('Deseja remover esse registro?')" class="btn-action del" title="Excluir Usuário"><i class="fa fa-trash-o fa-lg"></i></a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
+    <?php include('includes/footer.inc'); ?>
+    <script>
+        $('#count').append($('tr').size()-1);
+        
+        function modify(value, id){
+            $.post('../controllers/user.php',{ id:id, action:'changeStatus', status:value, type:'0'}, function(result) {
+                $('tbody').children().remove();
+                $('tbody').append(result);
+                $('#count').contents().remove();
+                $('#count').append($('tr').size()-1);
+            });    
+        }
+        
+        setTimeout(function(){
+            $('.msg').fadeOut();
+        }, 2000);
+    </script>
+</body>
+</html>
